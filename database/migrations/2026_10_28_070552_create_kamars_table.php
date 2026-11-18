@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('kamars', function (Blueprint $table) {
             $table->id();
+            $table->string("namaNomorKamar");
+            $table->integer("luasKamar");
+            $table->integer("hargaBulanan");
+            $table->string("status")->default("tersedia");
             $table->timestamps();
         });
     }

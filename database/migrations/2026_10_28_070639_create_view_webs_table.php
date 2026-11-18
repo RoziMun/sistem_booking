@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('view_webs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("idKost")->constrained('kosts');
+            $table->foreignId("idUsers")->constrained('users');
+            $table->timestamp("visited_at");
             $table->timestamps();
         });
     }
