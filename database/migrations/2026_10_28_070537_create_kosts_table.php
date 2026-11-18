@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('kosts', function (Blueprint $table) {
             $table->id();
+            $table->string("namaKost");
+            $table->text("deskripsi");
+            $table->text("alamat");
+            $table->string("kota");
+            $table->string("provinsi");
+            $table->string("jenisKost");
+            $table->string("status");
             $table->timestamps();
         });
     }

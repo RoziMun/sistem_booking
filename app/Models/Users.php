@@ -15,4 +15,8 @@ class Users extends Model
         "nomorHp",
         "role"
     ];
+
+    public function views(){
+        return $this->hasMany(ViewWeb::class, 'idUser');
+    }
 }

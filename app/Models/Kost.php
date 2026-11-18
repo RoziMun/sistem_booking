@@ -17,4 +17,8 @@ class Kost extends Model
         "jenisKost",
         "status"
     ];
+
+    public function views(){
+        return $this->belongsTo(ViewWeb::class, 'idKost');
+    }
 }

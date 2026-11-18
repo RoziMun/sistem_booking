@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('foto_kosts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("idKamar")->constrained('kamars');
+            $table->string("foto");
+            $table->text("keterangan");
             $table->timestamps();
         });
     }
